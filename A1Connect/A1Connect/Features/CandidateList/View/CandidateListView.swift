@@ -15,6 +15,7 @@ struct CandidateListView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                Color.appBackground.ignoresSafeArea()
                 if viewModel.isLoading {
                     ProgressView("Loading Candidates...")
                 } else if let errorMessage = viewModel.errorMessage {
